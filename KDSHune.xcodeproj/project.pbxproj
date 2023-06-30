@@ -11,6 +11,12 @@
 		010C30882A4F1D940000427C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C30872A4F1D940000427C /* ContentView.swift */; };
 		010C308A2A4F1D940000427C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010C30892A4F1D940000427C /* Assets.xcassets */; };
 		010C308D2A4F1D940000427C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010C308C2A4F1D940000427C /* Preview Assets.xcassets */; };
+		010C30982A4F1DD60000427C /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C30972A4F1DD60000427C /* EmptyStateView.swift */; };
+		010C309A2A4F1E520000427C /* LoadingStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C30992A4F1E520000427C /* LoadingStateView.swift */; };
+		010C309C2A4F1EA30000427C /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C309B2A4F1EA30000427C /* ErrorStateView.swift */; };
+		010C309E2A4F20520000427C /* TickerDataRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C309D2A4F20520000427C /* TickerDataRowView.swift */; };
+		010C30A12A4F20910000427C /* TickerListRowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C30A02A4F20910000427C /* TickerListRowData.swift */; };
+		010C30A42A4F29A90000427C /* AlphaVantageStockAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 010C30A32A4F29A90000427C /* AlphaVantageStockAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,11 @@
 		010C30872A4F1D940000427C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		010C30892A4F1D940000427C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		010C308C2A4F1D940000427C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		010C30972A4F1DD60000427C /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		010C30992A4F1E520000427C /* LoadingStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateView.swift; sourceTree = "<group>"; };
+		010C309B2A4F1EA30000427C /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
+		010C309D2A4F20520000427C /* TickerDataRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDataRowView.swift; sourceTree = "<group>"; };
+		010C30A02A4F20910000427C /* TickerListRowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListRowData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				010C30A42A4F29A90000427C /* AlphaVantageStockAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +63,8 @@
 		010C30842A4F1D940000427C /* KDSHune */ = {
 			isa = PBXGroup;
 			children = (
+				010C30932A4F1DB30000427C /* Views */,
+				010C309F2A4F207C0000427C /* Data */,
 				010C30852A4F1D940000427C /* KDSHuneApp.swift */,
 				010C30872A4F1D940000427C /* ContentView.swift */,
 				010C30892A4F1D940000427C /* Assets.xcassets */,
@@ -65,6 +79,33 @@
 				010C308C2A4F1D940000427C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		010C30932A4F1DB30000427C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				010C30942A4F1DB80000427C /* Common */,
+				010C309D2A4F20520000427C /* TickerDataRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		010C30942A4F1DB80000427C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				010C30972A4F1DD60000427C /* EmptyStateView.swift */,
+				010C30992A4F1E520000427C /* LoadingStateView.swift */,
+				010C309B2A4F1EA30000427C /* ErrorStateView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		010C309F2A4F207C0000427C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				010C30A02A4F20910000427C /* TickerListRowData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +124,9 @@
 			dependencies = (
 			);
 			name = KDSHune;
+			packageProductDependencies = (
+				010C30A32A4F29A90000427C /* AlphaVantageStockAPI */,
+			);
 			productName = KDSHune;
 			productReference = 010C30822A4F1D940000427C /* KDSHune.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +155,9 @@
 				Base,
 			);
 			mainGroup = 010C30792A4F1D940000427C;
+			packageReferences = (
+				010C30A22A4F29A90000427C /* XCRemoteSwiftPackageReference "AlphaVantageStockAPI" */,
+			);
 			productRefGroup = 010C30832A4F1D940000427C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				010C30982A4F1DD60000427C /* EmptyStateView.swift in Sources */,
+				010C309E2A4F20520000427C /* TickerDataRowView.swift in Sources */,
+				010C30A12A4F20910000427C /* TickerListRowData.swift in Sources */,
 				010C30882A4F1D940000427C /* ContentView.swift in Sources */,
 				010C30862A4F1D940000427C /* KDSHuneApp.swift in Sources */,
+				010C309A2A4F1E520000427C /* LoadingStateView.swift in Sources */,
+				010C309C2A4F1EA30000427C /* ErrorStateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +391,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		010C30A22A4F29A90000427C /* XCRemoteSwiftPackageReference "AlphaVantageStockAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:KrisdaSiangchaew/AlphaVantageStockAPI.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		010C30A32A4F29A90000427C /* AlphaVantageStockAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 010C30A22A4F29A90000427C /* XCRemoteSwiftPackageReference "AlphaVantageStockAPI" */;
+			productName = AlphaVantageStockAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 010C307A2A4F1D940000427C /* Project object */;
 }
