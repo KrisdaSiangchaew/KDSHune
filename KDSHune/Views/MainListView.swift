@@ -11,6 +11,7 @@ import AlphaVantageStockAPI
 struct MainListView: View {
     @EnvironmentObject var appVM: AppViewModel
     @StateObject var quotesVM = QuotesViewModel()
+    @StateObject var searchVM = SearchViewModel()
     
     var body: some View {
         tickerListView
@@ -18,13 +19,19 @@ struct MainListView: View {
             .overlay { overlayView }
             .toolbar {
                 titleToolbar
+                attributionToolbar
             }
+            .searchable(text: $searchVM.query)
     }
     
     @ViewBuilder
     private var overlayView: some View {
         if appVM.tickers.isEmpty {
             EmptyStateView(text: appVM.emptyTickerText)
+        }
+        
+        if searchVM.isSearching {
+            SearchView(searchVM: searchVM)
         }
     }
     
@@ -49,6 +56,14 @@ struct MainListView: View {
             .font(.title2.bold())
         }
     }
+    
+    private var attributionToolbar: some ToolbarContent {
+        return ToolbarItem(placement: .bottomBar) {
+            HStack {
+                appVM.openAttributeLink
+            }
+        }
+    }
 }
 
 struct MainListView_Previews: PreviewProvider {
@@ -64,22 +79,28 @@ struct MainListView_Previews: PreviewProvider {
         return vm
     }()
     
-    @StateObject static var quotesVM: QuotesViewModel = {
+    static var quotesVM: QuotesViewModel = {
         let vm = QuotesViewModel()
         vm.quoteDict = GlobalQuoteData.stubsDict
+        return vm
+    }()
+    
+    static var searchVM: SearchViewModel = {
+        let vm = SearchViewModel()
+        vm.phase = .success(Ticker.stubs)
         return vm
     }()
     
     static var previews: some View {
         Group {
             NavigationStack {
-                MainListView(quotesVM: quotesVM)
+                MainListView(quotesVM: quotesVM, searchVM: searchVM)
             }
             .environmentObject(appVM)
             .previewDisplayName("With Tickers")
             
             NavigationStack {
-                MainListView(quotesVM: quotesVM)
+                MainListView(quotesVM: quotesVM, searchVM: searchVM)
             }
             .environmentObject(emptyAppVM)
             .previewDisplayName("Without Tickers")

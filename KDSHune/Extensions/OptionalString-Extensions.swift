@@ -15,6 +15,6 @@ extension String? {
     
     func toCurrency(currencyCode: String? = nil) -> String? {
         guard let value = self.double else { return nil }
-        return value.formatted(.currency(code: currencyCode ?? ""))
+        return value.rounded(toPlaces: 2).formatted(.currency(code: currencyCode ?? ""))
     }
 }

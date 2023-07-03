@@ -10,7 +10,7 @@ import AlphaVantageStockAPI
 
 extension GlobalQuoteData {
     var priceText: String? {
-        price.toCurrency()
+        price.toCurrency(currencyCode: "USD")
     }
     
     var diffText: String? {
