@@ -15,7 +15,7 @@ struct TickerListRowData {
         case search(isSaved: Bool, onButtonTap: () -> Void)
     }
     
-    let symbol: String
+    let symbol: String?
     let name: String?
     let price: PriceChange?
     let type: RowType

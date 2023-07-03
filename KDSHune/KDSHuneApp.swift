@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct KDSHuneApp: App {
+    @StateObject var appVM = AppViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                MainListView()
+            }
+            .environmentObject(appVM)
         }
     }
 }

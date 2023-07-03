@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TickerDataRowView: View {
+struct TickerListRowView: View {
     let data: TickerListRowData
     
     var body: some View {
@@ -21,7 +21,7 @@ struct TickerDataRowView: View {
             }
             
             VStack(alignment: .leading) {
-                Text(data.symbol).font(.headline.bold())
+                Text(data.symbol ?? "").font(.headline.bold())
                 if let name = data.name {
                     Text(name)
                         .font(.subheadline)
@@ -81,14 +81,14 @@ struct TickerDataRowView_Previews: PreviewProvider {
         VStack(alignment: .leading) {
             Text("Main List")
             VStack {
-                TickerDataRowView(data: appleTickerListRowData(rowType: .main))
-                TickerDataRowView(data: ibmTickerListRowData(rowType: .main))
+                TickerListRowView(data: appleTickerListRowData(rowType: .main))
+                TickerListRowView(data: ibmTickerListRowData(rowType: .main))
             }.padding()
             
             Text("Search List")
             VStack {
-                TickerDataRowView(data: appleTickerListRowData(rowType: .search(isSaved: true, onButtonTap: {})))
-                TickerDataRowView(data: ibmTickerListRowData(rowType: .search(isSaved: false, onButtonTap: {})))
+                TickerListRowView(data: appleTickerListRowData(rowType: .search(isSaved: true, onButtonTap: {})))
+                TickerListRowView(data: ibmTickerListRowData(rowType: .search(isSaved: false, onButtonTap: {})))
             }.padding()
         }.previewLayout(.sizeThatFits)
     }

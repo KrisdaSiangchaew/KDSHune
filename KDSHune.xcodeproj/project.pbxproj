@@ -8,28 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		010C30862A4F1D940000427C /* KDSHuneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C30852A4F1D940000427C /* KDSHuneApp.swift */; };
-		010C30882A4F1D940000427C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C30872A4F1D940000427C /* ContentView.swift */; };
+		010C30882A4F1D940000427C /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C30872A4F1D940000427C /* MainListView.swift */; };
 		010C308A2A4F1D940000427C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010C30892A4F1D940000427C /* Assets.xcassets */; };
 		010C308D2A4F1D940000427C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010C308C2A4F1D940000427C /* Preview Assets.xcassets */; };
 		010C30982A4F1DD60000427C /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C30972A4F1DD60000427C /* EmptyStateView.swift */; };
 		010C309A2A4F1E520000427C /* LoadingStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C30992A4F1E520000427C /* LoadingStateView.swift */; };
 		010C309C2A4F1EA30000427C /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C309B2A4F1EA30000427C /* ErrorStateView.swift */; };
-		010C309E2A4F20520000427C /* TickerDataRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C309D2A4F20520000427C /* TickerDataRowView.swift */; };
+		010C309E2A4F20520000427C /* TickerListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C309D2A4F20520000427C /* TickerListRowView.swift */; };
 		010C30A12A4F20910000427C /* TickerListRowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C30A02A4F20910000427C /* TickerListRowData.swift */; };
-		010C30A42A4F29A90000427C /* AlphaVantageStockAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 010C30A32A4F29A90000427C /* AlphaVantageStockAPI */; };
+		01ACBACE2A4FD4D400872DA1 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ACBACD2A4FD4D400872DA1 /* AppViewModel.swift */; };
+		01ACBAD12A4FD5AA00872DA1 /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ACBAD02A4FD5AA00872DA1 /* Stubs.swift */; };
+		01F6EFE92A4FDCF9004261BB /* AlphaVantageStockAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 01F6EFE82A4FDCF9004261BB /* AlphaVantageStockAPI */; };
+		01F6EFEB2A504CB6004261BB /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F6EFEA2A504CB6004261BB /* QuotesViewModel.swift */; };
+		01F6EFEE2A504DCC004261BB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F6EFED2A504DCC004261BB /* Utils.swift */; };
+		01F6EFF12A50537C004261BB /* OptionalString-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F6EFF02A50537C004261BB /* OptionalString-Extensions.swift */; };
+		01F6EFF32A5053A3004261BB /* GlobalQuoteData-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F6EFF22A5053A3004261BB /* GlobalQuoteData-Extensions.swift */; };
+		01F6EFF52A508DEE004261BB /* Ticker-Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F6EFF42A508DEE004261BB /* Ticker-Identifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		010C30822A4F1D940000427C /* KDSHune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KDSHune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		010C30852A4F1D940000427C /* KDSHuneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDSHuneApp.swift; sourceTree = "<group>"; };
-		010C30872A4F1D940000427C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		010C30872A4F1D940000427C /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
 		010C30892A4F1D940000427C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		010C308C2A4F1D940000427C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		010C30972A4F1DD60000427C /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		010C30992A4F1E520000427C /* LoadingStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateView.swift; sourceTree = "<group>"; };
 		010C309B2A4F1EA30000427C /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
-		010C309D2A4F20520000427C /* TickerDataRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDataRowView.swift; sourceTree = "<group>"; };
+		010C309D2A4F20520000427C /* TickerListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListRowView.swift; sourceTree = "<group>"; };
 		010C30A02A4F20910000427C /* TickerListRowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListRowData.swift; sourceTree = "<group>"; };
+		01ACBACD2A4FD4D400872DA1 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		01ACBAD02A4FD5AA00872DA1 /* Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
+		01F6EFEA2A504CB6004261BB /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
+		01F6EFED2A504DCC004261BB /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		01F6EFF02A50537C004261BB /* OptionalString-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OptionalString-Extensions.swift"; sourceTree = "<group>"; };
+		01F6EFF22A5053A3004261BB /* GlobalQuoteData-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlobalQuoteData-Extensions.swift"; sourceTree = "<group>"; };
+		01F6EFF42A508DEE004261BB /* Ticker-Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticker-Identifiable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				010C30A42A4F29A90000427C /* AlphaVantageStockAPI in Frameworks */,
+				01F6EFE92A4FDCF9004261BB /* AlphaVantageStockAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,10 +77,13 @@
 		010C30842A4F1D940000427C /* KDSHune */ = {
 			isa = PBXGroup;
 			children = (
-				010C30932A4F1DB30000427C /* Views */,
-				010C309F2A4F207C0000427C /* Data */,
 				010C30852A4F1D940000427C /* KDSHuneApp.swift */,
-				010C30872A4F1D940000427C /* ContentView.swift */,
+				01ACBACC2A4FD4C800872DA1 /* View Models */,
+				010C30932A4F1DB30000427C /* Views */,
+				010C309F2A4F207C0000427C /* Models */,
+				01F6EFEF2A505367004261BB /* Extensions */,
+				01F6EFEC2A504DBC004261BB /* Utils */,
+				01ACBACF2A4FD52500872DA1 /* Mocks and Stubs */,
 				010C30892A4F1D940000427C /* Assets.xcassets */,
 				010C308B2A4F1D940000427C /* Preview Content */,
 			);
@@ -84,8 +101,9 @@
 		010C30932A4F1DB30000427C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				010C30872A4F1D940000427C /* MainListView.swift */,
 				010C30942A4F1DB80000427C /* Common */,
-				010C309D2A4F20520000427C /* TickerDataRowView.swift */,
+				010C309D2A4F20520000427C /* TickerListRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -100,12 +118,47 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		010C309F2A4F207C0000427C /* Data */ = {
+		010C309F2A4F207C0000427C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				010C30A02A4F20910000427C /* TickerListRowData.swift */,
 			);
-			path = Data;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		01ACBACC2A4FD4C800872DA1 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				01ACBACD2A4FD4D400872DA1 /* AppViewModel.swift */,
+				01F6EFEA2A504CB6004261BB /* QuotesViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		01ACBACF2A4FD52500872DA1 /* Mocks and Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				01ACBAD02A4FD5AA00872DA1 /* Stubs.swift */,
+			);
+			path = "Mocks and Stubs";
+			sourceTree = "<group>";
+		};
+		01F6EFEC2A504DBC004261BB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				01F6EFED2A504DCC004261BB /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		01F6EFEF2A505367004261BB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				01F6EFF02A50537C004261BB /* OptionalString-Extensions.swift */,
+				01F6EFF22A5053A3004261BB /* GlobalQuoteData-Extensions.swift */,
+				01F6EFF42A508DEE004261BB /* Ticker-Identifiable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +178,7 @@
 			);
 			name = KDSHune;
 			packageProductDependencies = (
-				010C30A32A4F29A90000427C /* AlphaVantageStockAPI */,
+				01F6EFE82A4FDCF9004261BB /* AlphaVantageStockAPI */,
 			);
 			productName = KDSHune;
 			productReference = 010C30822A4F1D940000427C /* KDSHune.app */;
@@ -156,7 +209,7 @@
 			);
 			mainGroup = 010C30792A4F1D940000427C;
 			packageReferences = (
-				010C30A22A4F29A90000427C /* XCRemoteSwiftPackageReference "AlphaVantageStockAPI" */,
+				01F6EFE72A4FDCF9004261BB /* XCRemoteSwiftPackageReference "AlphaVantageStockAPI" */,
 			);
 			productRefGroup = 010C30832A4F1D940000427C /* Products */;
 			projectDirPath = "";
@@ -184,13 +237,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01ACBAD12A4FD5AA00872DA1 /* Stubs.swift in Sources */,
 				010C30982A4F1DD60000427C /* EmptyStateView.swift in Sources */,
-				010C309E2A4F20520000427C /* TickerDataRowView.swift in Sources */,
+				010C309E2A4F20520000427C /* TickerListRowView.swift in Sources */,
+				01F6EFF32A5053A3004261BB /* GlobalQuoteData-Extensions.swift in Sources */,
+				01F6EFEB2A504CB6004261BB /* QuotesViewModel.swift in Sources */,
+				01ACBACE2A4FD4D400872DA1 /* AppViewModel.swift in Sources */,
 				010C30A12A4F20910000427C /* TickerListRowData.swift in Sources */,
-				010C30882A4F1D940000427C /* ContentView.swift in Sources */,
+				01F6EFF12A50537C004261BB /* OptionalString-Extensions.swift in Sources */,
+				010C30882A4F1D940000427C /* MainListView.swift in Sources */,
+				01F6EFEE2A504DCC004261BB /* Utils.swift in Sources */,
 				010C30862A4F1D940000427C /* KDSHuneApp.swift in Sources */,
 				010C309A2A4F1E520000427C /* LoadingStateView.swift in Sources */,
 				010C309C2A4F1EA30000427C /* ErrorStateView.swift in Sources */,
+				01F6EFF52A508DEE004261BB /* Ticker-Identifiable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +453,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		010C30A22A4F29A90000427C /* XCRemoteSwiftPackageReference "AlphaVantageStockAPI" */ = {
+		01F6EFE72A4FDCF9004261BB /* XCRemoteSwiftPackageReference "AlphaVantageStockAPI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:KrisdaSiangchaew/AlphaVantageStockAPI.git";
 			requirement = {
@@ -404,9 +464,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		010C30A32A4F29A90000427C /* AlphaVantageStockAPI */ = {
+		01F6EFE82A4FDCF9004261BB /* AlphaVantageStockAPI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 010C30A22A4F29A90000427C /* XCRemoteSwiftPackageReference "AlphaVantageStockAPI" */;
+			package = 01F6EFE72A4FDCF9004261BB /* XCRemoteSwiftPackageReference "AlphaVantageStockAPI" */;
 			productName = AlphaVantageStockAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
