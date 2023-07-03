@@ -26,8 +26,8 @@ struct SearchView: View {
                         )
                     )
             )
-            .contentShape(Rectangle())
-            .onTapGesture { }
+//            .contentShape(Rectangle())
+//            .onTapGesture { }
         }
         .listStyle(.plain)
         .overlay { listSearchOverlay }
@@ -37,7 +37,11 @@ struct SearchView: View {
     private var listSearchOverlay: some View {
         switch searchVM.phase {
         case .failure(let error):
-            ErrorStateView(error: error.localizedDescription) { }
+            ErrorStateView(error: error.localizedDescription) {
+                Task {
+                    await searchVM.searchTickers()
+                }
+            }
         case .empty:
             EmptyStateView(text: searchVM.emptyListText)
         case .fetching:
