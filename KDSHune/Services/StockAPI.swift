@@ -14,3 +14,10 @@ protocol StockAPI {
 }
 
 extension AlphaVantageStockAPI: StockAPI {}
+
+class API {
+    static let shared: AlphaVantageStockAPI = {
+        let apiKey = ProcessInfo.processInfo.environment["API_KEY"] ?? "demo"
+        return AlphaVantageStockAPI(apiKey: apiKey)
+    }()
+}

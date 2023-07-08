@@ -11,3 +11,9 @@ import AlphaVantageStockAPI
 extension Ticker: Identifiable {
     public var id: UUID { UUID() }
 }
+
+extension Ticker: Equatable {
+    public static func == (lhs: Ticker, rhs: Ticker) -> Bool {
+        lhs.symbol == rhs.symbol
+    }
+}

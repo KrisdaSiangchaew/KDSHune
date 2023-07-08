@@ -13,6 +13,20 @@ import AlphaVantageStockAPI
 class QuotesViewModel: ObservableObject {
     @Published var quoteDict: [String : GlobalQuoteData] = [:]
     
+    func fetchQuotes(tickers: [Ticker]) async {
+        guard !tickers.isEmpty else { return }
+        do {
+            let symbols = tickers.compactMap { $0.symbol }
+            for symbol in symbols {
+                let quote = try await API.shared.fetchGlobalQuote(symbol: symbol)
+                guard let data = quote.data else { break }
+                self.quoteDict[symbol] = data
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
     func priceForTicker(_ ticker: Ticker) -> PriceChange? {
         guard let symbol = ticker.symbol,
               let quote = quoteDict[symbol],

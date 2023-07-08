@@ -13,6 +13,7 @@ struct MainListView: View {
     @StateObject var quotesVM = QuotesViewModel()
     @StateObject var searchVM = SearchViewModel()
     
+    // MARK: - Body
     var body: some View {
         tickerListView
             .listStyle(.plain)
@@ -22,8 +23,13 @@ struct MainListView: View {
                 attributionToolbar
             }
             .searchable(text: $searchVM.query)
+            .refreshable { await
+                quotesVM.fetchQuotes(tickers: appVM.tickers)
+            }
+            .task(id: appVM.tickers) { await quotesVM.fetchQuotes(tickers: appVM.tickers)}
     }
     
+    // MARK: - overylayView
     @ViewBuilder
     private var overlayView: some View {
         if appVM.tickers.isEmpty {
@@ -35,6 +41,7 @@ struct MainListView: View {
         }
     }
     
+    // MARK: - tickerListView
     private var tickerListView: some View {
         List {
             ForEach(appVM.tickers) { ticker in
@@ -46,6 +53,7 @@ struct MainListView: View {
         }
     }
     
+    // MARK: - titleToolbar
     private var titleToolbar: some ToolbarContent {
         ToolbarItem(placement: .navigationBarLeading) {
             VStack(alignment: .leading, spacing: 4) {

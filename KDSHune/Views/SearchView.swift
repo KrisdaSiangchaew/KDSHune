@@ -30,6 +30,12 @@ struct SearchView: View {
 //            .onTapGesture { }
         }
         .listStyle(.plain)
+        .refreshable {
+            await quotesVM.fetchQuotes(tickers: searchVM.tickers)
+        }
+        .task(id: searchVM.tickers) {
+            await quotesVM.fetchQuotes(tickers: searchVM.tickers)
+        }
         .overlay { listSearchOverlay }
     }
     

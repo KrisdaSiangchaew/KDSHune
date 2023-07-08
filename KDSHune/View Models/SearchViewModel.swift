@@ -27,14 +27,9 @@ class SearchViewModel: ObservableObject {
         "Symbols not found for \n\"\(query)\""
     }
     
-    private let stockAPI: StockAPI
-    
     private var cancellable = Set<AnyCancellable>()
     
     init(query: String = "") {
-        #warning("check how to install api key")
-        let apiKey = ProcessInfo.processInfo.environment["API_KEY"] ?? "demo"
-        self.stockAPI = AlphaVantageStockAPI(apiKey: apiKey)
         self.query = query
         
         startObserving()
@@ -42,7 +37,7 @@ class SearchViewModel: ObservableObject {
     
     private func startObserving() {
         $query
-            .debounce(for: 0.25, scheduler: DispatchQueue.main)
+            .debounce(for: 5, scheduler: DispatchQueue.main)
             .sink { _ in
                 Task { [weak self] in await self?.searchTickers() }
             }
@@ -60,7 +55,7 @@ class SearchViewModel: ObservableObject {
         phase = .fetching
         
         do {
-            let tickers = try await stockAPI.tickerSearch(keywords: searchQuery)
+            let tickers = try await API.shared.tickerSearch(keywords: searchQuery)
             guard trimmedQuery == searchQuery else { return }
             if tickers.isEmpty {
                 phase = .empty

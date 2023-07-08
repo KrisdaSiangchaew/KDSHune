@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AlphaVantageStockAPI
 
 @main
 struct KDSHuneApp: App {
