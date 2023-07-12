@@ -21,7 +21,7 @@ class QuotesViewModel: ObservableObject {
     func fetchQuotes(tickers: [Ticker]) async {
         guard !tickers.isEmpty else { return }
         do {
-            let symbols = tickers.compactMap { $0.symbol }
+            let symbols = tickers.compactMap { $0.symbol }.joined(separator: ",")
             
             let quotes = try await stockAPI.fetchGlobalQuotes(symbols: symbols)
             
