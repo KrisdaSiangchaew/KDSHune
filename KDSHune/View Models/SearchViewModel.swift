@@ -27,10 +27,13 @@ class SearchViewModel: ObservableObject {
         "Symbols not found for \n\"\(query)\""
     }
     
+    private let stockAPI: StockAPI
+    
     private var cancellable = Set<AnyCancellable>()
     
-    init(query: String = "") {
+    init(query: String = "", stockAPI: StockAPI = API.shared) {
         self.query = query
+        self.stockAPI = stockAPI
         
         startObserving()
     }
@@ -55,7 +58,7 @@ class SearchViewModel: ObservableObject {
         phase = .fetching
         
         do {
-            let tickers = try await API.shared.tickerSearch(keywords: searchQuery)
+            let tickers = try await stockAPI.tickerSearch(keywords: searchQuery)
             guard trimmedQuery == searchQuery else { return }
             if tickers.isEmpty {
                 phase = .empty
@@ -63,7 +66,7 @@ class SearchViewModel: ObservableObject {
                 phase = .success(tickers)
             }
         } catch {
-            if searchQuery != searchQuery { return }
+            if searchQuery != trimmedQuery { return }
             print(error.localizedDescription)
             phase = .failure(error)
         }

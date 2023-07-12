@@ -32,7 +32,7 @@ struct TickerListRowView: View {
             Spacer()
             
             if let (price, change) = data.price {
-                VStack(alignment: .trailing) {
+                VStack(alignment: .trailing, spacing: 4) {
                     Text(price)
                     priceChangeView(text: change)
                 }

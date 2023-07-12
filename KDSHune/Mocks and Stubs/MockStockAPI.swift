@@ -16,8 +16,8 @@ struct MockStockAPI: StockAPI {
         try await stubbedTickerSearchCallback()
     }
     
-    var stubbedFetchGlobalQuoteCallback: (() async throws -> GlobalQuote)!
-    func fetchGlobalQuote(symbol: String) async throws -> GlobalQuote {
+    var stubbedFetchGlobalQuoteCallback: (() async throws -> [GlobalQuote])!
+    func fetchGlobalQuotes(symbols: [String]) async throws -> [GlobalQuote] {
         try await stubbedFetchGlobalQuoteCallback()
     }
 }

@@ -10,10 +10,19 @@ import AlphaVantageStockAPI
 
 protocol StockAPI {
     func tickerSearch(keywords: String) async throws -> [Ticker]
-    func fetchGlobalQuote(symbol: String) async throws -> GlobalQuote
+    func fetchGlobalQuotes(symbols: [String]) async throws -> [GlobalQuote]
 }
 
-extension AlphaVantageStockAPI: StockAPI {}
+extension AlphaVantageStockAPI: StockAPI {
+    public func fetchGlobalQuotes(symbols: [String]) async throws -> [GlobalQuote] {
+        var quotes: [GlobalQuote] = []
+        for symbol in symbols {
+            let quote = try await fetchGlobalQuote(symbol: symbol)
+            quotes.append(quote)
+        }
+        return quotes
+    }
+}
 
 class API {
     static let shared: AlphaVantageStockAPI = {

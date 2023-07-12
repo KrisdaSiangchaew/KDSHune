@@ -21,6 +21,13 @@ extension Ticker {
     }
 }
 
+extension GlobalQuote {
+    static var stubs: [GlobalQuote] {
+        let globalQuotes = GlobalQuoteData.stubs.map { GlobalQuote(data: $0, error: nil) }
+        return globalQuotes
+    }
+}
+
 extension GlobalQuoteData {
     static var stubs: [GlobalQuoteData] {
         [

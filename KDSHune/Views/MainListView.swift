@@ -76,27 +76,29 @@ struct MainListView: View {
 
 struct MainListView_Previews: PreviewProvider {
     @StateObject static var appVM: AppViewModel = {
-        let vm = AppViewModel()
-        vm.tickers = Ticker.stubs
-        return vm
+        var mock = MockTickerListRepository()
+        mock.stubbedLoad = { Ticker.stubs }
+        return AppViewModel(repository: mock)
     }()
     
     @StateObject static var emptyAppVM: AppViewModel = {
-        let vm = AppViewModel()
-        vm.tickers = []
-        return vm
+        var mock = MockTickerListRepository()
+        mock.stubbedLoad = { [] }
+        return AppViewModel(repository: mock)
     }()
     
     static var quotesVM: QuotesViewModel = {
-        let vm = QuotesViewModel()
-        vm.quoteDict = GlobalQuoteData.stubsDict
-        return vm
+        var mock = MockStockAPI()
+        mock.stubbedFetchGlobalQuoteCallback = {
+            GlobalQuote.stubs
+        }
+        return QuotesViewModel(stockAPI: mock)
     }()
     
     static var searchVM: SearchViewModel = {
-        let vm = SearchViewModel()
-        vm.phase = .success(Ticker.stubs)
-        return vm
+        var mock = MockStockAPI()
+        mock.stubbedTickerSearchCallback = { Ticker.stubs }
+        return SearchViewModel(stockAPI: mock)
     }()
     
     static var previews: some View {

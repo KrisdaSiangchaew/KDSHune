@@ -12,14 +12,21 @@ import AlphaVantageStockAPI
 @MainActor
 class QuotesViewModel: ObservableObject {
     @Published var quoteDict: [String : GlobalQuoteData] = [:]
+    private let stockAPI: StockAPI
+    
+    init(stockAPI: StockAPI = API.shared) {
+        self.stockAPI = stockAPI
+    }
     
     func fetchQuotes(tickers: [Ticker]) async {
         guard !tickers.isEmpty else { return }
         do {
             let symbols = tickers.compactMap { $0.symbol }
-            for symbol in symbols {
-                let quote = try await API.shared.fetchGlobalQuote(symbol: symbol)
-                guard let data = quote.data else { break }
+            
+            let quotes = try await stockAPI.fetchGlobalQuotes(symbols: symbols)
+            
+            for quote in quotes {
+                guard let data = quote.data, let symbol = data.symbol else { break }
                 self.quoteDict[symbol] = data
             }
         } catch {

@@ -30,6 +30,8 @@
 		01F6EFF12A50537C004261BB /* OptionalString-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F6EFF02A50537C004261BB /* OptionalString-Extensions.swift */; };
 		01F6EFF32A5053A3004261BB /* GlobalQuoteData-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F6EFF22A5053A3004261BB /* GlobalQuoteData-Extensions.swift */; };
 		01F6EFF52A508DEE004261BB /* Ticker-Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F6EFF42A508DEE004261BB /* Ticker-Identifiable.swift */; };
+		01F81E2B2A5918F0001A95EB /* TickerPListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F81E2A2A5918F0001A95EB /* TickerPListRepository.swift */; };
+		01F81E2D2A591D13001A95EB /* MockTickerListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F81E2C2A591D13001A95EB /* MockTickerListRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		01F6EFF02A50537C004261BB /* OptionalString-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OptionalString-Extensions.swift"; sourceTree = "<group>"; };
 		01F6EFF22A5053A3004261BB /* GlobalQuoteData-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlobalQuoteData-Extensions.swift"; sourceTree = "<group>"; };
 		01F6EFF42A508DEE004261BB /* Ticker-Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticker-Identifiable.swift"; sourceTree = "<group>"; };
+		01F81E2A2A5918F0001A95EB /* TickerPListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerPListRepository.swift; sourceTree = "<group>"; };
+		01F81E2C2A591D13001A95EB /* MockTickerListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTickerListRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				011215412A53172500FAFBEA /* StockAPI.swift */,
+				01F81E2A2A5918F0001A95EB /* TickerPListRepository.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			children = (
 				01ACBAD02A4FD5AA00872DA1 /* Stubs.swift */,
 				011215432A5317C300FAFBEA /* MockStockAPI.swift */,
+				01F81E2C2A591D13001A95EB /* MockTickerListRepository.swift */,
 			);
 			path = "Mocks and Stubs";
 			sourceTree = "<group>";
@@ -270,11 +276,13 @@
 				01F6EFEB2A504CB6004261BB /* QuotesViewModel.swift in Sources */,
 				011215422A53172500FAFBEA /* StockAPI.swift in Sources */,
 				01ACBACE2A4FD4D400872DA1 /* AppViewModel.swift in Sources */,
+				01F81E2D2A591D13001A95EB /* MockTickerListRepository.swift in Sources */,
 				0112153B2A53048500FAFBEA /* FetchPhase.swift in Sources */,
 				010C30A12A4F20910000427C /* TickerListRowData.swift in Sources */,
 				01F6EFF12A50537C004261BB /* OptionalString-Extensions.swift in Sources */,
 				011215392A5302D100FAFBEA /* Double-Extensions.swift in Sources */,
 				0112153F2A53081600FAFBEA /* SearchView.swift in Sources */,
+				01F81E2B2A5918F0001A95EB /* TickerPListRepository.swift in Sources */,
 				010C30882A4F1D940000427C /* MainListView.swift in Sources */,
 				01F6EFEE2A504DCC004261BB /* Utils.swift in Sources */,
 				010C30862A4F1D940000427C /* KDSHuneApp.swift in Sources */,
