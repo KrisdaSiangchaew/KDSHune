@@ -16,16 +16,19 @@
 		010C309C2A4F1EA30000427C /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C309B2A4F1EA30000427C /* ErrorStateView.swift */; };
 		010C309E2A4F20520000427C /* TickerListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C309D2A4F20520000427C /* TickerListRowView.swift */; };
 		010C30A12A4F20910000427C /* TickerListRowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C30A02A4F20910000427C /* TickerListRowData.swift */; };
+		01105F832A6035F600324BAC /* DateRangePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01105F822A6035F600324BAC /* DateRangePickerView.swift */; };
+		01105F882A60382200324BAC /* AlphaVantageStockAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 01105F872A60382200324BAC /* AlphaVantageStockAPI */; };
 		011215392A5302D100FAFBEA /* Double-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011215382A5302D100FAFBEA /* Double-Extensions.swift */; };
 		0112153B2A53048500FAFBEA /* FetchPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0112153A2A53048500FAFBEA /* FetchPhase.swift */; };
 		0112153D2A5304F500FAFBEA /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0112153C2A5304F500FAFBEA /* SearchViewModel.swift */; };
 		0112153F2A53081600FAFBEA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0112153E2A53081600FAFBEA /* SearchView.swift */; };
 		011215422A53172500FAFBEA /* StockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011215412A53172500FAFBEA /* StockAPI.swift */; };
 		011215442A5317C300FAFBEA /* MockStockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011215432A5317C300FAFBEA /* MockStockAPI.swift */; };
-		011D7BA12A5EF2FD00EB3910 /* TickerQuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D7BA02A5EF2FD00EB3910 /* TickerQuoteViewModel.swift */; };
+		011D7BA12A5EF2FD00EB3910 /* TickerGlobalQuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D7BA02A5EF2FD00EB3910 /* TickerGlobalQuoteViewModel.swift */; };
+		011D7BA42A5EFAD100EB3910 /* StockTickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D7BA32A5EFAD100EB3910 /* StockTickerView.swift */; };
+		019F680A2A603B6C00E33F2D /* SeriesRange-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F68092A603B6C00E33F2D /* SeriesRange-Extension.swift */; };
 		01ACBACE2A4FD4D400872DA1 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ACBACD2A4FD4D400872DA1 /* AppViewModel.swift */; };
 		01ACBAD12A4FD5AA00872DA1 /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ACBAD02A4FD5AA00872DA1 /* Stubs.swift */; };
-		01F6EFE92A4FDCF9004261BB /* AlphaVantageStockAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 01F6EFE82A4FDCF9004261BB /* AlphaVantageStockAPI */; };
 		01F6EFEB2A504CB6004261BB /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F6EFEA2A504CB6004261BB /* QuotesViewModel.swift */; };
 		01F6EFEE2A504DCC004261BB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F6EFED2A504DCC004261BB /* Utils.swift */; };
 		01F6EFF12A50537C004261BB /* OptionalString-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F6EFF02A50537C004261BB /* OptionalString-Extensions.swift */; };
@@ -46,13 +49,16 @@
 		010C309B2A4F1EA30000427C /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
 		010C309D2A4F20520000427C /* TickerListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListRowView.swift; sourceTree = "<group>"; };
 		010C30A02A4F20910000427C /* TickerListRowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListRowData.swift; sourceTree = "<group>"; };
+		01105F822A6035F600324BAC /* DateRangePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangePickerView.swift; sourceTree = "<group>"; };
 		011215382A5302D100FAFBEA /* Double-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double-Extensions.swift"; sourceTree = "<group>"; };
 		0112153A2A53048500FAFBEA /* FetchPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPhase.swift; sourceTree = "<group>"; };
 		0112153C2A5304F500FAFBEA /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		0112153E2A53081600FAFBEA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		011215412A53172500FAFBEA /* StockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockAPI.swift; sourceTree = "<group>"; };
 		011215432A5317C300FAFBEA /* MockStockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStockAPI.swift; sourceTree = "<group>"; };
-		011D7BA02A5EF2FD00EB3910 /* TickerQuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerQuoteViewModel.swift; sourceTree = "<group>"; };
+		011D7BA02A5EF2FD00EB3910 /* TickerGlobalQuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerGlobalQuoteViewModel.swift; sourceTree = "<group>"; };
+		011D7BA32A5EFAD100EB3910 /* StockTickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTickerView.swift; sourceTree = "<group>"; };
+		019F68092A603B6C00E33F2D /* SeriesRange-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeriesRange-Extension.swift"; sourceTree = "<group>"; };
 		01ACBACD2A4FD4D400872DA1 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		01ACBAD02A4FD5AA00872DA1 /* Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
 		01F6EFEA2A504CB6004261BB /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
@@ -69,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01F6EFE92A4FDCF9004261BB /* AlphaVantageStockAPI in Frameworks */,
+				01105F882A60382200324BAC /* AlphaVantageStockAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +126,7 @@
 		010C30932A4F1DB30000427C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				011D7BA22A5EFAB100EB3910 /* Stock Ticker Sheet Views */,
 				010C30872A4F1D940000427C /* MainListView.swift */,
 				0112153E2A53081600FAFBEA /* SearchView.swift */,
 				010C309D2A4F20520000427C /* TickerListRowView.swift */,
@@ -156,13 +163,22 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		011D7BA22A5EFAB100EB3910 /* Stock Ticker Sheet Views */ = {
+			isa = PBXGroup;
+			children = (
+				011D7BA32A5EFAD100EB3910 /* StockTickerView.swift */,
+				01105F822A6035F600324BAC /* DateRangePickerView.swift */,
+			);
+			path = "Stock Ticker Sheet Views";
+			sourceTree = "<group>";
+		};
 		01ACBACC2A4FD4C800872DA1 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
 				01ACBACD2A4FD4D400872DA1 /* AppViewModel.swift */,
 				01F6EFEA2A504CB6004261BB /* QuotesViewModel.swift */,
 				0112153C2A5304F500FAFBEA /* SearchViewModel.swift */,
-				011D7BA02A5EF2FD00EB3910 /* TickerQuoteViewModel.swift */,
+				011D7BA02A5EF2FD00EB3910 /* TickerGlobalQuoteViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -192,6 +208,7 @@
 				01F6EFF22A5053A3004261BB /* GlobalQuoteData-Extensions.swift */,
 				01F6EFF42A508DEE004261BB /* Ticker-Identifiable.swift */,
 				011215382A5302D100FAFBEA /* Double-Extensions.swift */,
+				019F68092A603B6C00E33F2D /* SeriesRange-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -213,7 +230,7 @@
 			);
 			name = KDSHune;
 			packageProductDependencies = (
-				01F6EFE82A4FDCF9004261BB /* AlphaVantageStockAPI */,
+				01105F872A60382200324BAC /* AlphaVantageStockAPI */,
 			);
 			productName = KDSHune;
 			productReference = 010C30822A4F1D940000427C /* KDSHune.app */;
@@ -244,7 +261,7 @@
 			);
 			mainGroup = 010C30792A4F1D940000427C;
 			packageReferences = (
-				01F6EFE72A4FDCF9004261BB /* XCRemoteSwiftPackageReference "AlphaVantageStockAPI" */,
+				01105F862A60382200324BAC /* XCRemoteSwiftPackageReference "AlphaVantageStockAPI" */,
 			);
 			productRefGroup = 010C30832A4F1D940000427C /* Products */;
 			projectDirPath = "";
@@ -273,12 +290,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				01ACBAD12A4FD5AA00872DA1 /* Stubs.swift in Sources */,
+				011D7BA42A5EFAD100EB3910 /* StockTickerView.swift in Sources */,
 				010C30982A4F1DD60000427C /* EmptyStateView.swift in Sources */,
 				010C309E2A4F20520000427C /* TickerListRowView.swift in Sources */,
 				01F6EFF32A5053A3004261BB /* GlobalQuoteData-Extensions.swift in Sources */,
 				01F6EFEB2A504CB6004261BB /* QuotesViewModel.swift in Sources */,
 				011215422A53172500FAFBEA /* StockAPI.swift in Sources */,
-				011D7BA12A5EF2FD00EB3910 /* TickerQuoteViewModel.swift in Sources */,
+				011D7BA12A5EF2FD00EB3910 /* TickerGlobalQuoteViewModel.swift in Sources */,
+				019F680A2A603B6C00E33F2D /* SeriesRange-Extension.swift in Sources */,
 				01ACBACE2A4FD4D400872DA1 /* AppViewModel.swift in Sources */,
 				01F81E2D2A591D13001A95EB /* MockTickerListRepository.swift in Sources */,
 				0112153B2A53048500FAFBEA /* FetchPhase.swift in Sources */,
@@ -290,6 +309,7 @@
 				010C30882A4F1D940000427C /* MainListView.swift in Sources */,
 				01F6EFEE2A504DCC004261BB /* Utils.swift in Sources */,
 				010C30862A4F1D940000427C /* KDSHuneApp.swift in Sources */,
+				01105F832A6035F600324BAC /* DateRangePickerView.swift in Sources */,
 				010C309A2A4F1E520000427C /* LoadingStateView.swift in Sources */,
 				0112153D2A5304F500FAFBEA /* SearchViewModel.swift in Sources */,
 				011215442A5317C300FAFBEA /* MockStockAPI.swift in Sources */,
@@ -497,7 +517,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		01F6EFE72A4FDCF9004261BB /* XCRemoteSwiftPackageReference "AlphaVantageStockAPI" */ = {
+		01105F862A60382200324BAC /* XCRemoteSwiftPackageReference "AlphaVantageStockAPI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:KrisdaSiangchaew/AlphaVantageStockAPI.git";
 			requirement = {
@@ -508,9 +528,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		01F6EFE82A4FDCF9004261BB /* AlphaVantageStockAPI */ = {
+		01105F872A60382200324BAC /* AlphaVantageStockAPI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 01F6EFE72A4FDCF9004261BB /* XCRemoteSwiftPackageReference "AlphaVantageStockAPI" */;
+			package = 01105F862A60382200324BAC /* XCRemoteSwiftPackageReference "AlphaVantageStockAPI" */;
 			productName = AlphaVantageStockAPI;
 		};
 /* End XCSwiftPackageProductDependency section */

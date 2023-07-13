@@ -98,6 +98,6 @@ struct TickerDataRowView_Previews: PreviewProvider {
     }
     
     static func ibmTickerListRowData(rowType: TickerListRowData.RowType) -> TickerListRowData {
-        TickerListRowData(symbol: "IBM", name: "International Business Machine Co. Ltd.", price: ("55.21", "0.33"), type: rowType)
+        TickerListRowData(symbol: "IBM", name: "International Business Machine Co. Ltd.", price: ("55.21", "0.3300"), type: rowType)
     }
 }

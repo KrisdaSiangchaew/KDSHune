@@ -36,10 +36,8 @@ class QuotesViewModel: ObservableObject {
     
     func priceForTicker(_ ticker: Ticker) -> PriceChange? {
         guard let symbol = ticker.symbol,
-              let quote = quoteDict[symbol],
-              let price = quote.priceText,
-              let change = quote.diffText else { return nil }
-        return (price, change)
+              let quote = quoteDict[symbol] else { return nil }
+        return (quote.priceText, quote.changeText)
               
     }
 }
