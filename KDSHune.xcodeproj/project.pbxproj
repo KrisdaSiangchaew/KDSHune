@@ -26,7 +26,7 @@
 		011215442A5317C300FAFBEA /* MockStockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011215432A5317C300FAFBEA /* MockStockAPI.swift */; };
 		011D7BA12A5EF2FD00EB3910 /* TickerGlobalQuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D7BA02A5EF2FD00EB3910 /* TickerGlobalQuoteViewModel.swift */; };
 		011D7BA42A5EFAD100EB3910 /* StockTickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D7BA32A5EFAD100EB3910 /* StockTickerView.swift */; };
-		019F680A2A603B6C00E33F2D /* SeriesRange-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F68092A603B6C00E33F2D /* SeriesRange-Extension.swift */; };
+		019F680C2A603DC600E33F2D /* SeriesRange-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F680B2A603DC600E33F2D /* SeriesRange-Extensions.swift */; };
 		01ACBACE2A4FD4D400872DA1 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ACBACD2A4FD4D400872DA1 /* AppViewModel.swift */; };
 		01ACBAD12A4FD5AA00872DA1 /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ACBAD02A4FD5AA00872DA1 /* Stubs.swift */; };
 		01F6EFEB2A504CB6004261BB /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F6EFEA2A504CB6004261BB /* QuotesViewModel.swift */; };
@@ -58,7 +58,7 @@
 		011215432A5317C300FAFBEA /* MockStockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStockAPI.swift; sourceTree = "<group>"; };
 		011D7BA02A5EF2FD00EB3910 /* TickerGlobalQuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerGlobalQuoteViewModel.swift; sourceTree = "<group>"; };
 		011D7BA32A5EFAD100EB3910 /* StockTickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTickerView.swift; sourceTree = "<group>"; };
-		019F68092A603B6C00E33F2D /* SeriesRange-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeriesRange-Extension.swift"; sourceTree = "<group>"; };
+		019F680B2A603DC600E33F2D /* SeriesRange-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeriesRange-Extensions.swift"; sourceTree = "<group>"; };
 		01ACBACD2A4FD4D400872DA1 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		01ACBAD02A4FD5AA00872DA1 /* Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
 		01F6EFEA2A504CB6004261BB /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 				01F6EFF22A5053A3004261BB /* GlobalQuoteData-Extensions.swift */,
 				01F6EFF42A508DEE004261BB /* Ticker-Identifiable.swift */,
 				011215382A5302D100FAFBEA /* Double-Extensions.swift */,
-				019F68092A603B6C00E33F2D /* SeriesRange-Extension.swift */,
+				019F680B2A603DC600E33F2D /* SeriesRange-Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,7 +297,6 @@
 				01F6EFEB2A504CB6004261BB /* QuotesViewModel.swift in Sources */,
 				011215422A53172500FAFBEA /* StockAPI.swift in Sources */,
 				011D7BA12A5EF2FD00EB3910 /* TickerGlobalQuoteViewModel.swift in Sources */,
-				019F680A2A603B6C00E33F2D /* SeriesRange-Extension.swift in Sources */,
 				01ACBACE2A4FD4D400872DA1 /* AppViewModel.swift in Sources */,
 				01F81E2D2A591D13001A95EB /* MockTickerListRepository.swift in Sources */,
 				0112153B2A53048500FAFBEA /* FetchPhase.swift in Sources */,
@@ -310,6 +309,7 @@
 				01F6EFEE2A504DCC004261BB /* Utils.swift in Sources */,
 				010C30862A4F1D940000427C /* KDSHuneApp.swift in Sources */,
 				01105F832A6035F600324BAC /* DateRangePickerView.swift in Sources */,
+				019F680C2A603DC600E33F2D /* SeriesRange-Extensions.swift in Sources */,
 				010C309A2A4F1E520000427C /* LoadingStateView.swift in Sources */,
 				0112153D2A5304F500FAFBEA /* SearchViewModel.swift in Sources */,
 				011215442A5317C300FAFBEA /* MockStockAPI.swift in Sources */,
